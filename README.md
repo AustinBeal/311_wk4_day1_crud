@@ -50,20 +50,33 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 ## SQL Statements
 
 1. INSERT two users:
+INSERT INTO users
+    (firstName, lastName, age)
+VALUES
+    ('test', 'user'),
+    ('test2', 'user');
 
+Select * from users where id = '501' & '502'
 
 2. UPDATE all Ohio addresses to "REDACTED":
+UPDATE
+    users
+SET
+    address = 'REDACTED'
+WHERE
+    state = 'Ohio' ;
+
 
 3. All three DELETES
 
 * DELETE from usersContact
-
+delete from userscontact where id = '114'
 
 * DELETE from usersAddress
-
+delete from usersaddress where id = '114'
 
 * DELETE from users
-
+delete from users where id = '114'
 
 ## Summary
 
